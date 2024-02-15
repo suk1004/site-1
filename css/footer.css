@@ -1,0 +1,70 @@
+@import url(common.css);
+
+/* footer--------------------------------------------- */
+footer{
+  border-top:1px solid #888;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  
+}
+.f_box{
+  width: 1400px;
+  height: inherit;
+  display: flex;
+  position: relative;
+  
+}
+.f_in_box{
+  display: flex;
+  justify-content: space-between;
+  width:500px;
+  height: 200px;
+  margin-top: 22px;
+}
+.f_in_box .line_1{
+  display: flex;
+  flex-direction: column;
+  line-height: 26px;
+  font-size: 14px;
+  color: #464646;
+  width: 300px;
+}
+.f_in_box .line_1 li:hover{
+  font-weight: bold;
+}
+.f_in_box .line_2{
+  display: flex;
+  flex-direction: column;
+  line-height: 26px;
+  font-size: 14px;
+  color: #464646;
+  width: 80px;
+}
+.f_in_box .line_2 li:hover{
+  font-weight: bold;
+}
+
+
+.f_box p:nth-of-type(1){
+  position: absolute;
+  left: 0;
+  top:200px;
+  font-size: 14px;
+  margin-top: 50px;
+  color: #464646;
+}
+.f_box p:nth-of-type(2){
+  margin-top: 20px;
+  margin-left: 250px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #464646;
+}
+.f_logo a img{
+  width: 100px;
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+}

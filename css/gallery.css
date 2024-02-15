@@ -1,0 +1,147 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* main--------------------------------------------- */
+.m_bg{
+  background:url(../image/gallery/g_main.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.m_bg::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+.m_txt h3{
+  position: absolute;
+  z-index: 50;
+  font-size: 50px;
+  letter-spacing: 15px;
+  color: #fff;
+  font-weight: 600;
+  transform: translate(-50%,-50%);
+}
+
+
+/* section-------------------------------------------- */
+section{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section h3{
+  width: 1400px;
+  text-align: center;
+  margin: 80px auto;
+  font-size:25px;
+  color: #333;
+  letter-spacing: 10px;
+  position: relative;
+}
+section h3::before{
+  content: '';
+  position: absolute;
+  width: 40%;
+  left: 0;
+  top: 50%;
+  border: 1px solid #333;
+}
+section h3::after{
+  content: '';
+  position: absolute;
+  width: 40%;
+  right: 0;
+  top: 50%;
+  border: 1px solid #333;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 5px;
+  width: 1400px;
+  height: 1100px;
+  margin: 0 auto 80px;
+  overflow:hidden;
+}
+.container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.container div:hover img{
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.8s;
+  filter: brightness(100%);
+}
+.container .card{
+  position: relative; 
+  overflow: hidden;
+}
+.container .card_txt{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  transform: translateX(-100%);
+  transition: 0.8s;
+}
+.container .card_txt span{
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  font-size:30px;
+  color: #fff;
+}
+.container .card_txt h6{
+  position: absolute;
+  left: 80px;
+  top: 120px;
+  font-size:50px;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+.container .two{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: 0.8s;
+}
+.container .card:hover .card_txt{
+  transform: translateX(0%);
+  cursor: pointer;
+}
+
+
+
+
+.big{grid-area: span 2/span 2;}
+.big img{filter: brightness(100%);}
+.wide{grid-column: span 2;}
+.wide img{filter: brightness(100%);}

@@ -1,0 +1,301 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(keyframes.css);
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* ############ Scroll Reveal CSS Animation ############ */
+
+.ltr {
+  animation: ltr 0.7s linear both; /* both: 끝난곳에서 멈춤 */
+}
+.rtl {
+  animation: rtl 0.7s linear both;
+}
+
+@keyframes ltr {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rtl {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* main_________________________________________________ */
+.content_main{
+  width: 100%;
+  height: 950px;
+  background: url(../image/vline/bgimg.png) no-repeat center;
+  background-size: cover;
+}
+.content_main .back_img{
+  width: 1400px;
+  margin: auto;
+  height: inherit;
+  position: relative;
+}
+.car_content {display: none;}
+.car_content.active {display: block;}
+
+.car_content img{
+  width: 950px;
+  position: absolute;
+  right:0;
+  bottom: 0;
+}
+.car_text{
+  position: absolute;
+  top: 85px;
+}
+.car_text span{
+  font-size: 20px;
+  color: #444;
+}
+.car_text h3{
+  font-size: 80px;
+  color: #333333;
+}
+.car_text p{
+  margin-top: 25px;
+  font-size: 15px;
+  width: 470px;
+  line-height: 25px;
+  color: #111;
+}
+
+.gauge{
+  position: absolute;
+  bottom: -60px;
+  width: 500px;
+  height: 350px;
+}
+
+.pie-chart {
+  position: relative;
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+.pie-chart small{
+  display: block;
+  font-size: 15px;
+  margin-top: 22px;
+  font-weight: 600;
+  line-height: 15px;
+}
+.pie-chart:nth-of-type(2) small{
+  margin-top: 28px;
+}
+span.center{
+  background: #f3f3f3;
+  display : block;
+  position: absolute;
+  top:50%; left:50%;
+  width:70px; height:70px;
+  border-radius: 50%;
+  text-align:center; 
+  font-size:30px;
+  transform: translate(-50%, -50%);
+}
+
+.content1_img{
+  width: 1400px;
+  margin: auto;
+  height: inherit;
+  position: absolute;
+}
+
+.content1_img img{
+  width: 950px;
+  position: absolute;
+  right:0;
+  bottom: 0;
+}
+
+.content1_img img{
+  display: none;
+}
+
+
+.icon{
+  font-size: 80px;
+  color: #fff;
+}
+.side_btn .lbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:5%;
+  width:65px;
+  height: 65px;
+}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
+.side_btn .rbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:5%;
+  width:65px;
+}
+.side_btn .rbtn:hover{opacity: 0.5;}
+
+.icon_scroll{
+  width: 30px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.icon_scroll div{
+  width: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  animation: scroll 2s infinite;
+}
+.icon_scroll div span{
+  font-size: 25px;
+  color: #222;
+}
+@keyframes scroll{
+  0%{transform: translateY(0px);}
+  100%{transform: translateY(30px);}
+}
+
+
+
+
+
+/* section_________________________________________________________ */
+section{
+  width: 100%;
+  height: 1400px;
+  margin: 100px 0;
+}
+.video_container{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.video_container iframe{width: 100%; border: none;}
+.flex_box1{
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ddd;
+}
+.flex_box1 .flex_inner_txt{
+  width: 100%;
+  height: 500px;
+  padding: 60px;
+  margin-top: 50px;
+}
+.flex_box1 .flex_inner_txt h4{
+  font-size: 35px;
+  line-height: 70px;
+  color: #222;
+}
+.flex_box1 .flex_inner_txt h4::before{
+  content: '';
+  position: absolute;
+  border: 2px solid #222;
+  width: 30px;
+  margin-top: 8px;
+}
+.flex_box1 .flex_inner_txt p{
+  font-size: 17px;
+  line-height: 25px;
+  margin-top: 30px;
+  color: #222;
+}
+
+.img_container1{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+.img_container1 p{
+  width: 50%;
+  position: relative;
+}
+.img_container1 p:nth-child(1):before{
+  content: 'Vantage Coupe';
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  bottom: 45%;
+  left: 40px;
+}
+.img_container1 p:nth-child(2):before{
+  content: 'Vantage Coupe F1edition';
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  bottom: 45%;
+  left: 40px;
+}
+.img_container1 p img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+
+.img_container2{
+  display: flex;
+  justify-content: space-between;
+}
+.img_container2 p{
+  width: 100%;
+  position: relative;
+}
+.img_container2 p:before{
+  content: 'Vantage Roadster';
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  bottom: 45%;
+  left: 40px;
+}
+.img_container2>img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.img_container2 p img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}

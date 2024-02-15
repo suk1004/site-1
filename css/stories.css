@@ -1,0 +1,173 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* ############ Scroll Reveal CSS Animation ############ */
+
+.ltr {
+  animation: ltr 0.5s linear both; /* both: 끝난곳에서 멈춤 */
+}
+.rtl {
+  animation: rtl 0.5s linear both;
+}
+.utd {
+  animation: utd 0.5s linear both;
+}
+
+@keyframes ltr {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rtl {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes utd {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* main--------------------------------------------- */
+.m_bg{
+  background:url(../image/stories/v_img.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.m_bg::before{
+  content: '';
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+}
+.wid{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+.sub_img1{
+  width: 120%;
+  margin-left: -80px;
+  margin-top: -70px;
+  object-fit: cover;
+}
+.sub_img1 img{
+  object-fit: cover;
+  width: 80%;
+}
+.m_txt{
+  width: 30%;
+  height: 130%;
+
+}
+.m_txt h3{
+  position: absolute;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 15px;
+  color: #fff;
+  margin-top: 160px;
+  z-index: 50;
+}
+
+
+/* section-------------------------------------------- */
+
+section{
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.content1{
+  width: 1400px;
+  height: 500px;
+  display: flex;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+.s_left, .s_center, .s_right{
+  display: flex;
+  width: 460px;
+  height: 350px;
+  margin-top: 70px;
+}
+
+section hr{
+  position: absolute;
+  width: 100%;
+  border: 5px solid #f8f8f8;
+  top: 300px;
+}
+
+
+.content2 {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 150px;
+}
+.content2 .align{
+  width: 1400px;
+  display: flex;
+  align-items: center;
+}
+.item1{
+  border-left: 1px solid #b80219;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+  flex-direction: column;
+  flex:3;
+}
+.item1 h4{
+  font-size: 25px;
+  margin-bottom: 25px;
+  color: #b80219;
+}
+.item1:nth-of-type(1){
+  border-left:none;
+}
+.item1 p{
+  margin: 0 18px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #000;
+}
